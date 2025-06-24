@@ -129,8 +129,9 @@ width: 450px;
     }
 
     .design{
-        margin-bottom: 25px;
+      margin-bottom: 25px;
       color: blue;
       animation: fadeAnimation 4s infinite;
+      margin-top: 40px;
       
     }
