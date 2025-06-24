@@ -1,40 +1,39 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>WhatsApp Button</title>
+  <style>
+    .whatsapp-button {
+      background-color: #25D366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    .whatsapp-button img {
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
+    }
+  </style>
 </head>
 <body>
 
-    <button onclick="f()">Submit</button>
-    <br>
-<label>
-    <input type="radio"name="a" id="a" />
-    </label>
+  <a class="whatsapp-button" href="https://wa.me/919559618602" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
+    Contact Me on WhatsApp
+  </a>
 
-    <label>
-    <input type="radio"name="a" id="b" />
-    </label>
-    
-    <label>
-    <input type="radio"name="a" id="c"/>
-    </label>
-
-<label>  
-<input type="radio"name="a" id="d" />
-</label> 
-
-<label>
-<input style="display: none;" type="radio"name="a"id="e"/>
-</label>
-
-<input type="checkbox"/>
-
-<script>
-    function f(){
-        document.getElementById("e").checked=true;
-    }
-</script>
 </body>
 </html>
