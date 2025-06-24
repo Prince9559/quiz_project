@@ -6,7 +6,7 @@
 
 .radio-group {
 height: 290px;
-width: 530px;
+width: 450px;
   
   border: 1px solid #ccc;
   border-radius: 1px;
@@ -81,11 +81,11 @@ width: 530px;
     }
 
 .pics{
-    width: 230px;
-    height: 230px;
-   margin-top: -180px;
+    width: 180px;
+    height: 150px;
+   margin-top: -150px;
    margin-bottom: 50px;
-   margin-left: 290px;
+   margin-left: 260px;
    border-radius: 10px;
 }
 .number{
