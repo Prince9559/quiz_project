@@ -15,7 +15,7 @@ width: 450px;
   display: flex;
   flex-direction: column; 
   gap: 15px; 
-  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -113,7 +113,6 @@ width: 450px;
       margin-bottom: 20px;
       margin-top: 30px;
     }
-
     .whatsapp-button img {
       height: 20px;
       margin-right: 10px;
@@ -121,4 +120,17 @@ width: 450px;
 
     .whatsapp-button:hover {
       background-color: darkcyan;
+    }
+
+
+    @keyframes fadeAnimation {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .design{
+        margin-bottom: 25px;
+      color: blue;
+      animation: fadeAnimation 4s infinite;
+      
     }

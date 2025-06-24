@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Picture from "./Picture";
+
 import './Quiz.css';
 
 function Quiz() {
@@ -42,6 +42,7 @@ function Quiz() {
 
         }
     };
+
 
     /**************************************** HandleSub ************************************************/ 
 
@@ -99,6 +100,7 @@ function Quiz() {
     
     <button className="text" onClick={() => { handlSub(); handleNext(); }}>Next</button>
 
+    
     <input className="pics" type="image"src="pic/1.jpg"></input>
 
     
@@ -112,6 +114,11 @@ function Quiz() {
     Contact Me on WhatsApp
   </a>
 
+<br></br>
+
+<footer className="design">
+    &copy; 2025 Prince Kumar | Designed with ❤️
+  </footer>
 
 </div>
 
