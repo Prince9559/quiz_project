@@ -2,38 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WhatsApp Button</title>
+  <title>USA Button</title>
   <style>
-    .whatsapp-button {
-      background-color: #25D366;
+    .usa-button {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background-color: #3C3B6E;
       color: white;
       padding: 12px 24px;
-      border-radius: 30px;
       border: none;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-flex;
-      align-items: center;
-      font-family: Arial, sans-serif;
+      border-radius: 30px;
       font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .whatsapp-button img {
-      height: 20px;
-      margin-right: 10px;
+    .usa-button:hover {
+      background-color: red;
+      transform: scale(1.1);
     }
 
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
+    .top-position {
+      top: 20px;
+      bottom: auto;
     }
   </style>
 </head>
-<body>
+<body style="height: 2000px;"> <!-- Scroll ke liye height -->
 
-  <a class="whatsapp-button" href="https://wa.me/919559618602" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
-    Contact Me on WhatsApp
-  </a>
+  <button class="usa-button" id="usaBtn" onclick="moveToTop()">🇺🇸 USA</button>
+
+  <script>
+    function moveToTop() {
+      const btn = document.getElementById("usaBtn");
+      btn.classList.add("top-position");
+    }
+  </script>
 
 </body>
 </html>

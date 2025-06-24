@@ -116,6 +116,14 @@ function Quiz() {
 
 <br></br>
 
+<a class="linkedin-button" href="https://www.linkedin.com/in/prince-kumar-724160333/" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" />
+  Connect Me on LinkedIn
+</a>
+
+
+<br></br>
+
 <footer className="design">
     &copy; 2025 Prince Kumar | Designed with ❤️
   </footer>
