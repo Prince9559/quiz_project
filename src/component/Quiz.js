@@ -121,6 +121,13 @@ function Quiz() {
   Connect Me on LinkedIn
 </a>
 
+<br></br>
+  <a class="github-button" href="https://github.com/prince9559" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
+  Connect Me on GitHub
+</a>
+
+
 
 <br></br>
 

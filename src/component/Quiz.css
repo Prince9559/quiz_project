@@ -50,7 +50,7 @@ width: 450px;
 .text:hover {
       transform: translateY(-3px);
     }
-    
+
 
 .quiz {
 
@@ -145,7 +145,7 @@ width: 450px;
     font-family: Arial, sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 3px;
   }
 
   .linkedin-button img {
@@ -157,22 +157,33 @@ width: 450px;
     background-color: darkcyan;
   }
 
-/* .text a {
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
-      font-weight: 600;
-      box-shadow: 0 4px 15px #38bdf8aa;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .text a:hover {
-      background: #60a5fa;
-      color: white;
-      box-shadow: 0 6px 20px #60a5faaa;
-      transform: translateY(-3px);
-    } */
+  .github-button {
+    background-color: #333333d8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    width: 220px;               
+    justify-content: center;     
+  }
+
+  .github-button img {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .github-button:hover {
+    background-color: #555;
+  }
+
+
+
 
