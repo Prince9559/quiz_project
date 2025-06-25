@@ -19,6 +19,12 @@ function Quiz() {
             setQuestions(response.data);
             setQno(0);
 
+      const options = ["a", "b", "c", "d", "e"];
+      options.forEach(id => {
+        const opt = document.getElementById(id);
+        if (opt) opt.checked = false;
+      });
+
         })
             .catch(error => {
 
@@ -28,9 +34,21 @@ function Quiz() {
 
     };
 
+    
     /**********************************  HandleNext ********************************************** */
 
     const handleNext = (e) => {
+
+  const optionA = document.getElementById("a");
+  const optionB = document.getElementById("b");
+  const optionC = document.getElementById("c");
+  const optionD = document.getElementById("d");
+
+  if (!optionA.checked && !optionB.checked && !optionC.checked && !optionD.checked) 
+  {
+    alert("Please select an option before proceeding.");
+    return;
+  }
 
         if (qno < questions.length - 1) 
         {
@@ -54,12 +72,7 @@ function Quiz() {
     };
 
 
-    /**************************************** HandleSub ************************************************/ 
-
-    // const handlSub =()=>
-    // {
-    //     document.getElementById("e").checked=true;
-    // };
+  
 
 /*********************************** Return *******************************************************/
 
@@ -110,7 +123,6 @@ function Quiz() {
     
     <button className="text"onClick={handleNext}>Next</button>
 
-    
     <input className="pics" type="image"src="pic/1.jpg"></input>
 
     
@@ -119,20 +131,20 @@ function Quiz() {
 
 <br></br>
 
-  <a class="whatsapp-button" href="https://wa.me/919559618602" target="_blank">
+  <a className="whatsapp-button" href="https://wa.me/919559618602" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
     Contact Me on WhatsApp
   </a>
 
 <br></br>
 
-<a class="linkedin-button" href="https://www.linkedin.com/in/prince-kumar-724160333/" target="_blank">
+<a className="linkedin-button" href="https://www.linkedin.com/in/prince-kumar-724160333/" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" />
   Connect Me on LinkedIn
 </a>
 
 <br></br>
-  <a class="github-button" href="https://github.com/prince9559" target="_blank">
+  <a className="github-button" href="https://github.com/prince9559" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
   Connect Me on GitHub
 </a>
