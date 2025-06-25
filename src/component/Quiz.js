@@ -7,6 +7,7 @@ function Quiz() {
 
     const [questions, setQuestions] = useState([]);
     const [qno, setQno] = useState(0);
+    
 
   /******************************** Show *******************************************************/
     
@@ -39,6 +40,10 @@ function Quiz() {
 
     const handleNext = (e) => {
 
+
+      let x=handleSum();
+      alert(x);
+
         const selectedOption = document.querySelector('input[name="choose"]:checked');
          if (!selectedOption || selectedOption.value === "e")
           
@@ -48,8 +53,6 @@ function Quiz() {
       
             return;
           }  
- 
-
 
         if (qno < questions.length - 1) 
         {
@@ -72,9 +75,23 @@ function Quiz() {
         }
     };
 
+/************************************* HandleSub ***************************************************/
+
+const handleSum =(e)=>{
+
+if(document.getElementById("a").checked)
+return "a";
+if(document.getElementById("b").checked)
+return "b";
+if(document.getElementById("c").checked)
+return "c";
+if(document.getElementById("d").checked)
+return "d";
+return false;
+
+}
 
   
-
 /*********************************** Return *******************************************************/
 
     return (
@@ -124,7 +141,8 @@ function Quiz() {
     
     <button className="text"onClick={handleNext}>Next</button>
 
-    <input className="pics" type="image"src="pic/1.jpg"></input>
+
+    <input className="pics" type="image"src="pic/bb.jpg"></input>
 
     
 </div>
@@ -149,8 +167,6 @@ function Quiz() {
   <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
   Connect Me on GitHub
 </a>
-
-
 
 <br></br>
 

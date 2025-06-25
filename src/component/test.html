@@ -1,45 +1,37 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>USA Button</title>
-  <style>
-    .usa-button {
-      position: fixed;
-      bottom: 40px;
-      right: 40px;
-      background-color: #3C3B6E;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .usa-button:hover {
-      background-color: red;
-      transform: scale(1.1);
-    }
-
-    .top-position {
-      top: 20px;
-      bottom: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body style="height: 2000px;"> <!-- Scroll ke liye height -->
-
-  <button class="usa-button" id="usaBtn" onclick="moveToTop()">🇺🇸 USA</button>
-
-  <script>
-    function moveToTop() {
-      const btn = document.getElementById("usaBtn");
-      btn.classList.add("top-position");
+<body><center>  
+    Coconut: <input type="radio" name="t" id="a" /><br/>
+    Apple:    <input type="radio" name="t" id="b"/><br/>
+    Banana:  <input type="radio" name="t" id="c" /><br/>
+    Grieps:  <input type="radio" name="t" id="d" /><br/>
+    <button onclick="f()">click</button>
+</center>
+<script>
+    function f()
+    {
+        let x=f1();
+        alert(x);
     }
-  </script>
+    function f1 () {
+if(document.getElementById("a").checked)
+return "a";
+if(document.getElementById("b").checked)
+return "b";
+if(document.getElementById("c").checked)
+return "c";
+if(document.getElementById("d").checked)
+return "d";
+return false;
 
+
+    }
+</script>
+ 
 </body>
 </html>
