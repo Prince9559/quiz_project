@@ -39,7 +39,7 @@ function Quiz() {
         //  alert(lastrd.checked);
          if(lastrd.checked)
          {
-          alert("Please Select Option");
+          // alert("Please Select Option");
           return;
          }
 
