@@ -39,16 +39,17 @@ function Quiz() {
 
     const handleNext = (e) => {
 
-  const optionA = document.getElementById("a");
-  const optionB = document.getElementById("b");
-  const optionC = document.getElementById("c");
-  const optionD = document.getElementById("d");
+        const selectedOption = document.querySelector('input[name="choose"]:checked');
+         if (!selectedOption || selectedOption.value === "e")
+          
+          {
 
-  if (!optionA.checked && !optionB.checked && !optionC.checked && !optionD.checked) 
-  {
-    alert("Please select an option before proceeding.");
-    return;
-  }
+            // alert("Please Select Option !");
+      
+            return;
+          }  
+ 
+
 
         if (qno < questions.length - 1) 
         {
