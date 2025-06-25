@@ -34,7 +34,17 @@ function Quiz() {
 
         if (qno < questions.length - 1) 
         {
+
+         let lastrd= document.getElementById("e");
+        //  alert(lastrd.checked);
+         if(lastrd.checked)
+         {
+          alert("Please Select Option");
+          return;
+         }
+
             setQno(qno + 1);
+            document.getElementById("e").checked=true;
         }
         else 
         {
@@ -46,10 +56,10 @@ function Quiz() {
 
     /**************************************** HandleSub ************************************************/ 
 
-    const handlSub =()=>
-    {
-        document.getElementById("e").checked=true;
-    };
+    // const handlSub =()=>
+    // {
+    //     document.getElementById("e").checked=true;
+    // };
 
 /*********************************** Return *******************************************************/
 
@@ -94,11 +104,11 @@ function Quiz() {
 
     <label>
 
-      <input style={{display:'none'}} type="radio"name="choose"value="e"id="e"/>
+      <input style={{display:"none"}} type="radio"name="choose"value="e"id="e"/>
       
     </label> 
     
-    <button className="text" onClick={() => { handlSub(); handleNext(); }}>Next</button>
+    <button className="text"onClick={handleNext}>Next</button>
 
     
     <input className="pics" type="image"src="pic/1.jpg"></input>
