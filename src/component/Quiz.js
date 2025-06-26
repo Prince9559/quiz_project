@@ -41,68 +41,43 @@ function Quiz() {
     
     /**********************************  HandleNext ********************************************** */
 
-    const handleNext = (e) => {
+const handleNext = () => {
+  const selectedOption = document.querySelector('input[name="choose"]:checked');
+  if (!selectedOption || selectedOption.value === "e") 
+  {
+    return;
+  }
 
-      let x=handleSum();
-      
-      // alert(x);
+  if (qno >= questions.length) 
+  {
+    alert(" Quiz Finished!");
+    return;
+  }
+
+  let givenanswer = handleSum();
+
+  correctanswer = questions[qno]["correct"];
+
+  if (givenanswer === correctanswer) 
+    {
+    if (score < questions.length) 
+    {
+      setScore(score + 1);
+    }
+  }
+
   
-        const selectedOption = document.querySelector('input[name="choose"]:checked');
-         if (!selectedOption || selectedOption.value === "e")          
-          {
-            // alert("Please Select Option !");
-            return;
-          }  
-      
-        let givenanswer=handleSum();
-        // alert(givenanswer);
+  if (qno === questions.length - 1) 
+  {
+    alert("🎉 Quiz Finished!");
+    return;
+  }
 
-if(qno>=questions.length-1)
-{
   
-  alert("Test Over");
-  return;
-}
+  setQno(qno + 1);
+  document.getElementById("e").checked = true;
 
-    correctanswer=questions[qno]["correct"];
-        // alert(givenanswer + ", Correct_Answer : " + correctanswer);
-         
-        if(givenanswer==correctanswer)
-        {
-          setScore(score+1);
-          // alert("Correct Answer !");
-        
-        }
-        else
-        {
-          // alert("Incorrect Answer !");
-          
-        }
-        
-        setQno(qno+1);    
-        document.getElementById("e").checked=true;
-
-        if (qno < questions.length - 1) 
-        {
-
-         let lastrd= document.getElementById("e");
-        //  alert(lastrd.checked);
-         if(lastrd.checked)
-         {
-          // alert("Please Select Option");
-          return;
-         }
-
-            setQno(qno + 1);
-            document.getElementById("e").checked=true;
-        }
-        else 
-        {
-            alert("Quiz Finished !");
-
-        }
-    };
-
+};
 
     
 /************************************* HandleSub ***************************************************/
