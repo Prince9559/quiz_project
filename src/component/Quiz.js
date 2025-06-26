@@ -70,12 +70,12 @@ if(qno>=questions.length-1)
         if(givenanswer==correctanswer)
         {
           setScore(score+1);
-          alert("Correct Answer !");
+          // alert("Correct Answer !");
         
         }
         else
         {
-          alert("Incorrect Answer !");
+          // alert("Incorrect Answer !");
           
         }
         
@@ -131,7 +131,7 @@ return false;
           
     {questions.length === 0 && (
       <div className="welcome">
-        <h1>👋 Welcome to Quiz!</h1>
+        <h1>👋 Welcome to Quiz !</h1>
         <p>Click on <strong>Start Quiz</strong> to begin.</p>
       </div>
     )}
