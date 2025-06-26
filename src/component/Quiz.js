@@ -9,6 +9,7 @@ function Quiz() {
     const [qno, setQno] = useState(0);
     const[score,setScore]=useState(0);
     const [showResult, setShowResult] = useState(false);
+    const[showFirework,setShowFirework]=useState(false);
     
     let correctanswer="";
 
@@ -65,6 +66,8 @@ const handleNext = () => {
     if (score < questions.length) 
     {
       setScore(score + 1);
+        setShowFirework(true);
+       setTimeout(() => setShowFirework(false), 1500);
     }
   }
 
@@ -105,6 +108,22 @@ return false;
     return (
         <div>
 
+{showFirework && (
+         <div className="firework-container">
+           {[...Array(20)].map((_, i) => (
+             <div
+               key={i}
+               className="fire-spark"
+               style={{
+                 top: `${Math.random() * 100}%`,
+                 left: `${Math.random() * 100}%`,
+                 backgroundColor: `hsl(${Math.random() * 360}, 100%, 60%)`,
+                 animationDelay: `${Math.random() * 0.5}s`,
+               }}
+             />
+           ))}
+         </div>
+       )}
 
           
     {questions.length === 0 && (
