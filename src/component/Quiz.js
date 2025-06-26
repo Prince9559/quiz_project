@@ -8,15 +8,6 @@ function Quiz() {
     const [questions, setQuestions] = useState([]);
     const [qno, setQno] = useState(0);
     const[score,setScore]=useState(0);
-
-    const questionImages = [
-      "pic/c.jpg",         
-      "pic/c++.jpg",  
-      "pic/delhi.jpg",  
-      "pic/modi.jpg",
-      "pic/tiger.jpg",
-      "pic/raje.jpg"  
-    ];
     
     let correctanswer="";
 
@@ -112,6 +103,8 @@ if(qno>=questions.length-1)
         }
     };
 
+
+    
 /************************************* HandleSub ***************************************************/
 
 const handleSum =(e)=>{
@@ -133,6 +126,15 @@ return false;
 
     return (
         <div>
+
+
+          
+    {questions.length === 0 && (
+      <div className="welcome">
+        <h1>👋 Welcome to Quiz!</h1>
+        <p>Click on <strong>Start Quiz</strong> to begin.</p>
+      </div>
+    )}
 
     <button className="quiz" onClick={show}><b>Start Quiz</b></button>
 
@@ -176,12 +178,10 @@ return false;
     
     <button className="text"onClick={handleNext}>Next</button>
 
-    {/* <input className="pics" type="image"src="pic/bb.jpg"></input> */}
 
-    <input className="pics"type="image"src={questionImages[qno]}alt={`${qno + 1}`}/>
+    <input className="pics" type="image" src={questions[qno]["src"]} alt={`Question ${qno + 1}`} />
 
 
-    
 </div>
 </div>
 
