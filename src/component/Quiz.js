@@ -8,6 +8,7 @@ function Quiz() {
     const [questions, setQuestions] = useState([]);
     const [qno, setQno] = useState(0);
     const[score,setScore]=useState(0);
+    const [showResult, setShowResult] = useState(false);
     
     let correctanswer="";
 
@@ -22,6 +23,7 @@ function Quiz() {
             setQuestions(response.data);
             setQno(0);
             setScore(0);
+            setShowResult(false);
             
             
       const options = ["a", "b", "c", "d", "e"];
@@ -69,7 +71,8 @@ const handleNext = () => {
   
   if (qno === questions.length - 1) 
   {
-    alert("🎉 Quiz Finished!");
+     setShowResult(true);
+      setQuestions([]);
     return;
   }
 
@@ -108,6 +111,7 @@ return false;
       <div className="welcome">
         <h1>👋 Welcome to Quiz !</h1>
         <p>Click on <strong>Start Quiz</strong> to begin.</p>
+        {showResult && <p><strong>🎉 Your Final Score: {score} / 10</strong></p>}
       </div>
     )}
 
