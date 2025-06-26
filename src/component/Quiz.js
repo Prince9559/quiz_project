@@ -7,7 +7,18 @@ function Quiz() {
 
     const [questions, setQuestions] = useState([]);
     const [qno, setQno] = useState(0);
+    const[score,setScore]=useState(0);
+
+    const questionImages = [
+      "pic/c.jpg",         
+      "pic/c++.jpg",  
+      "pic/delhi.jpg",  
+      "pic/modi.jpg",
+      "pic/tiger.jpg",
+      "pic/raje.jpg"  
+    ];
     
+    let correctanswer="";
 
   /******************************** Show *******************************************************/
     
@@ -19,14 +30,16 @@ function Quiz() {
 
             setQuestions(response.data);
             setQno(0);
-
+            setScore(0);
+            
+            
       const options = ["a", "b", "c", "d", "e"];
       options.forEach(id => {
         const opt = document.getElementById(id);
         if (opt) opt.checked = false;
       });
 
-        })
+      })
             .catch(error => {
 
                 console.log("Error", error);
@@ -34,25 +47,49 @@ function Quiz() {
             })
 
     };
-
     
     /**********************************  HandleNext ********************************************** */
 
     const handleNext = (e) => {
 
-
       let x=handleSum();
-      alert(x);
-
-        const selectedOption = document.querySelector('input[name="choose"]:checked');
-         if (!selectedOption || selectedOption.value === "e")
-          
-          {
-
-            // alert("Please Select Option !");
       
+      // alert(x);
+  
+        const selectedOption = document.querySelector('input[name="choose"]:checked');
+         if (!selectedOption || selectedOption.value === "e")          
+          {
+            // alert("Please Select Option !");
             return;
           }  
+      
+        let givenanswer=handleSum();
+        // alert(givenanswer);
+
+if(qno>=questions.length-1)
+{
+  
+  alert("Test Over");
+  return;
+}
+
+    correctanswer=questions[qno]["correct"];
+        // alert(givenanswer + ", Correct_Answer : " + correctanswer);
+         
+        if(givenanswer==correctanswer)
+        {
+          setScore(score+1);
+          alert("Correct Answer !");
+        
+        }
+        else
+        {
+          alert("Incorrect Answer !");
+          
+        }
+        
+        setQno(qno+1);    
+        document.getElementById("e").checked=true;
 
         if (qno < questions.length - 1) 
         {
@@ -103,10 +140,10 @@ return false;
     <div>
 
     <h2 className="ques"><b>Question_No : </b>{questions[qno]["ques_no"]}</h2>
-
     
     <h2 className="number"><b>Question : </b>{questions[qno]["question"]}</h2>
-    
+
+    <h2>✅ Your Score : {score} / {questions.length}</h2>
 
 
 <div className="radio-group-container">
@@ -134,15 +171,15 @@ return false;
     </label>
 
     <label>
-
-      <input style={{display:"none"}} type="radio"name="choose"value="e"id="e"/>
-      
+      <input style={{display:"none"}} type="radio"name="choose"value="e"id="e"/> 
     </label> 
     
     <button className="text"onClick={handleNext}>Next</button>
 
+    {/* <input className="pics" type="image"src="pic/bb.jpg"></input> */}
 
-    <input className="pics" type="image"src="pic/bb.jpg"></input>
+    <input className="pics"type="image"src={questionImages[qno]}alt={`${qno + 1}`}/>
+
 
     
 </div>

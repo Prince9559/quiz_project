@@ -76,14 +76,15 @@ width: 450px;
     box-shadow: none; 
     }
 
-.pics{
+.pics {
     width: 180px;
-    height: 150px;
-   margin-top: -150px;
-   margin-bottom: 50px;
-   margin-left: 260px;
-   border-radius: 10px;
+    height: 165px;
+    margin-top: -168px;
+    margin-bottom: 50px;
+    margin-left: 255px;
+    border-radius: 10px;
 }
+
 .number{
 
     color: #4caf50;
@@ -185,6 +186,22 @@ width: 450px;
     background-color: #555;
   }
 
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 25px;
+  background-color: #0076b5;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 25px;
+  transition: width 0.4s ease-in-out;
+}
 
 
 
