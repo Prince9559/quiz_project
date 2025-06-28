@@ -1,8 +1,9 @@
- import React from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Quiz from "./component/Quiz";
 import Maths from "./component/Maths";
 import Home from "./component/Home";
+import Computer from "./component/Computer";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/math" element={<Maths />} />
+        <Route path="/computer"element={<Computer/>}/>
       </Routes>
     </Router>
     </div>

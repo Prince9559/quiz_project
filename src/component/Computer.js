@@ -1,9 +1,9 @@
  import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import './Math.css';
+import './Computer.css';
 
-function Maths() {
+function Computer() {
   const [questions, setQuestions] = useState([]);
   const [qno, setQno] = useState(0);
   const [score, setScore] = useState(0);
@@ -19,7 +19,7 @@ function Maths() {
 
   /******************************** Show *******************************************************/
   const show = () => {
-    const baseURL = 'https://prince9559.github.io/jsonproject/math.json';
+    const baseURL = 'https://prince9559.github.io/jsonproject/computer.json';
 
     axios.get(baseURL)
       .then((response) => {
@@ -90,11 +90,11 @@ function Maths() {
   return (
     <div>
       {showFirework && (
-        <div className="firework-containe">
+        <div className="firework-containers">
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="fir-spark"
+              className="fire-sparks"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -108,12 +108,12 @@ function Maths() {
 
       {/* Show Result with Restart only */}
       {questions.length === 0 && showResult && (
-        <div className="wel">
+        <div className="welcomes">
           <h1>👋 Quiz Finished!</h1>
           <pre>
             <p><strong>🎉 Your Final Score: {score} / 10</strong></p>
           </pre>
-          <button className="qui" onClick={show}>
+          <button className="quizs" onClick={show}>
             <b>Restart Quiz</b>
           </button>
         </div>
@@ -122,14 +122,14 @@ function Maths() {
       {questions.length > 0 && (
         <div>
 
-          <h1 className="fad">🥀 <i>Welcome to Math Quiz</i> 🌷</h1>
+          <h1 className="fadings">🥀 <i>Welcome to Computer Quiz</i> 🌷</h1>
 
-          <h2 className="qu"><b>Question No:</b> {questions[qno]["ques_no"]}</h2>
-          <h2 className="numbe"><b>Question:</b> {questions[qno]["question"]}</h2>
+          <h2 className="quess"><b>Question No:</b> {questions[qno]["ques_no"]}</h2>
+          <h2 className="numbers"><b>Question:</b> {questions[qno]["question"]}</h2>
           <h2>✅ Your Score: {score} / {questions.length}</h2>
 
-          <div className="group-container">
-            <div className="group">
+          <div className="radio-container">
+            <div className="radio">
               <label>
                 <input type="radio" name="choose" value="a" id="a" />
                 {questions[qno]["a"]}
@@ -154,36 +154,36 @@ function Maths() {
                 <input style={{ display: "none" }} type="radio" name="choose" value="e" id="e" />
               </label>
 
-              <button className="tex" onClick={() => { handleNext(); storeData(); }}>Next</button>
+              <button className="texts" onClick={() => { handleNext(); storeData(); }}>Next</button>
 
-              <input className="pi" type="image" src="pic/ma.jpg" alt="Math pic" />
+              
             </div>
           </div>
 
           <br />
 
-          <a className="whatsapp-butt" href="https://wa.me/919559618602" target="_blank" rel="noreferrer">
+          <a className="whatsapp-buttons" href="https://wa.me/919559618602" target="_blank" rel="noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
             Contact Me on WhatsApp
           </a>
 
           <br />
 
-          <a className="linkedin-butt" href="https://www.linkedin.com/in/prince-kumar-724160333/" target="_blank" rel="noreferrer">
+          <a className="linkedin-buttons" href="https://www.linkedin.com/in/prince-kumar-724160333/" target="_blank" rel="noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" />
             Connect Me on LinkedIn
           </a>
 
           <br />
 
-          <a className="github-butt" href="https://github.com/prince9559" target="_blank" rel="noreferrer">
+          <a className="github-buttons" href="https://github.com/prince9559" target="_blank" rel="noreferrer">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
             Connect Me on GitHub
           </a>
 
           <br />
 
-          <footer className="desi">
+          <footer className="designs">
             &copy; 2025 Prince Kumar | Designed with ❤️
           </footer>
         </div>
@@ -192,4 +192,4 @@ function Maths() {
   );
 }
 
-export default Maths;
+export default Computer;

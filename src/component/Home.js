@@ -6,13 +6,17 @@ function Home() {
     <div className="home">
     
       <h1 className='fading'>🥀 Welcome to My Quiz App 🎯</h1>
-      
+
       <div className="button-container">
         <Link to="/quiz">
           <button className="home-button"><strong>General Image Quiz</strong></button>
         </Link>
         <Link to="/math">
           <button className="home-button"><strong>Math Quiz</strong></button>
+        </Link>
+
+        <Link to="/computer">
+        <button className='home-button'><strong>Computer Quiz</strong></button>
         </Link>
       </div>
     </div>

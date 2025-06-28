@@ -1,10 +1,10 @@
- .group-container {
+ .radio-container {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 
-.group {
+.radio{
 height: 290px;
 width: 450px;
   
@@ -19,18 +19,18 @@ width: 450px;
 
 }
 
-.group label {
+.radio label {
   display: flex; 
   align-items: center;
   font-size: 21px;
   cursor: pointer;
   gap: 10px;
   margin-top: 10px;
-  margin-left: 15px;
+  margin-left: 80px;
   
 }
 
- .tex {
+ .texts {
     position: absolute;
     height: 50px;
     width: 120px;
@@ -42,19 +42,19 @@ width: 450px;
     font-size: 20px;
     color: #f9f9f9;      
     margin-top: 220px;  
-    margin-left: 15px;
+    margin-left: 150px;
     box-shadow: 0 4px 15px #38bdf8aa;
     transition: all 0.3s ease;
 }
 
-.tex:hover {
+.texts:hover {
       transform: translateY(-3px);
     } 
 
 
     
 
-.qui {
+.quizs {
 
     background-color: #4caf50;
     height: 50px;
@@ -73,7 +73,7 @@ width: 450px;
     
 }
       
-.qui:hover {
+.quizs:hover {
     transform: translate(2px, 2px); 
     box-shadow: none; 
   }
@@ -83,7 +83,7 @@ width: 450px;
       50% { opacity: 1; }
     }
 
-.pi {
+.picss {
     width: 180px;
     height: 165px;
     margin-top: -168px;
@@ -92,17 +92,17 @@ width: 450px;
     border-radius: 10px;    
     }
 
-.numbe{
+.numbers{
 
     color: #4caf50;
     
 }
 
-.qu{
+.quess{
     color: darkcyan;
 }
 
-.whatsapp-butt {
+.whatsapp-buttons {
       background-color: #25D366;
       color: white;
       padding: 12px 24px;
@@ -117,12 +117,12 @@ width: 450px;
       margin-bottom: 20px;
       margin-top: 6px;
     }
-    .whatsapp-butt img {
+    .whatsapp-buttons img {
       height: 20px;
       margin-right: 10px;
     }
 
-    .whatsapp-butt:hover {
+    .whatsapp-buttons:hover {
       background-color: darkcyan;
     }
 
@@ -132,7 +132,7 @@ width: 450px;
       50% { opacity: 1; }
     }
 
-    .desi{
+    .designs{
       margin-bottom: 25px;
       color: blue;
       animation: fadeAnimation 4s infinite;
@@ -141,7 +141,7 @@ width: 450px;
       
     }
 
-  .linkedin-butt {
+  .linkedin-buttons {
     background-color: #0076b5b7;
     color: white;
     padding: 12px 24px;
@@ -157,16 +157,16 @@ width: 450px;
     margin-top: 3px;
   }
 
-  .linkedin-butt img {
+  .linkedin-buttons img {
     height: 20px;
     margin-right: 10px;
   }
 
-  .linkedin-butt:hover {
+  .linkedin-buttons:hover {
     background-color: darkcyan;
   }
 
-  .github-butt {
+  .github-buttons {
     background-color: #333333d8;
     color: white;
     padding: 12px 24px;
@@ -184,33 +184,32 @@ width: 450px;
     justify-content: center;     
   }
 
-  .github-butt img {
+  .github-buttons img {
     height: 20px;
     margin-right: 10px;
   }
 
-  .github-butt:hover {
+  .github-buttons:hover {
     background-color: #555;
   }
 
-
-.wel {
+.welcomes {
   text-align: center;
   margin-top: 40px;
   font-family: 'Arial', sans-serif;
 }
 
-.wel h1 {
+.welcomes h1 {
   color: #2c3e50;
   font-size: 32px;
 }
 
-.wel p {
+.welcomes p {
   font-size: 18px;
   color: #555;
 }
 
-.firework-containe {
+.firework-containers {
   position: fixed;
   top: 0;
   left: 0;
@@ -221,7 +220,7 @@ width: 450px;
   overflow: hidden;
 }
 
-.fir-spark {
+.fire-sparks {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -252,9 +251,9 @@ width: 450px;
       50% { opacity: 1; }
     }
 
-    .fad{
+    .fadings{
       border-radius: 30px;   
-      color: yellowgreen;
+      color:red;
       animation: fadeAnimation 2s infinite;
       margin-top: 10px;
       margin-bottom: 1px;
