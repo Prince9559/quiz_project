@@ -9,7 +9,7 @@ function Home() {
 
       <div className="button-container">
         <Link to="/quiz">
-          <button className="home-button"><strong>General Image Quiz</strong></button>
+          <button className="home-button"><strong>Image Quiz</strong></button>
         </Link>
         <Link to="/math">
           <button className="home-button"><strong>Math Quiz</strong></button>
