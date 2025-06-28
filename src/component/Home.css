@@ -1,42 +1,26 @@
-.home {
+ .home-button {
+  background-color: #4CAF50;
+  padding: 10px 16px;         
+  border-radius: 6px;
+  font-size: 15px;            
+  cursor: pointer;
+  border: 1px solid #4CAF50;
+  color: #f9f9f9;
+  transition: all 0.3s ease;
+  min-width: 110px;           
   text-align: center;
-  padding: 50px;
-  
+  white-space: nowrap;
 }
 
 .button-container {
   display: flex;
+  flex-wrap: wrap;            
   justify-content: center;
-  gap: 20px;
+  gap: 12px;                   
   margin-top: 30px;
 }
 
-.home-button {
-  background-color: #4CAF50;
-  padding: 13px 25px;
-  border-radius: 8px;
-  font-size: 17px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-    border: 1px solid #4CAF50; 
-    gap: 16px;
-    color: #f9f9f9;      
-    transition: all 0.3s ease;
-}
-
 .home-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  background-color: #45a049;
 }
-
-@keyframes fadeAnimation {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
-
-    .fading{
-      
-      color:darkred;
-      animation: fadeAnimation 4s infinite;
-      
-      
-    }

@@ -1,0 +1,266 @@
+ .radio-contai {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.radio-but{
+height: 290px;
+width: 450px;
+  
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  background-color: #f9f9f9;
+
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; 
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+.radio-but label {
+  display: flex; 
+  align-items: center;
+  font-size: 21px;
+  cursor: pointer;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 160px;
+  
+}
+
+ .t {
+    position: absolute;
+    height: 50px;
+    width: 120px;
+    border: 1px solid rgba(0, 0, 255, 0.826); 
+    border-radius: 999px;
+    padding: 3px 32px;
+    background-color: blue;
+    gap: 16px;
+    font-size: 20px;
+    color: #f9f9f9;      
+    margin-top: 220px;  
+    margin-left: 150px;
+    box-shadow: 0 4px 15px #38bdf8aa;
+    transition: all 0.3s ease;
+}
+
+.t:hover {
+      transform: translateY(-3px);
+    } 
+
+
+    
+
+.q {
+
+    background-color: #4caf50;
+    height: 50px;
+    width: 200px;
+    border: 0.1px solid aqua; 
+    border-radius: 999px;
+    padding: 3px 32px;
+    gap: 16px;
+    font-size: 20px;
+    color: white;   
+    margin-top: 15px;  
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease-in-out; 
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); 
+    
+}
+      
+.q:hover {
+    transform: translate(2px, 2px); 
+    box-shadow: none; 
+  }
+
+@keyframes fadeAnimation {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+.n{
+
+    color: #4caf50;
+    
+}
+
+.qq{
+    color: darkcyan;
+}
+
+.what-buttons {
+      background-color: #25D366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin-bottom: 20px;
+      margin-top: 6px;
+    }
+    .what-buttons img {
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .what-buttons:hover {
+      background-color: darkcyan;
+    }
+
+
+    @keyframes fadeAnimation {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .d{
+      margin-bottom: 25px;
+      color: blue;
+      animation: fadeAnimation 4s infinite;
+      margin-top: 40px;
+      
+      
+    }
+
+  .link-buttons {
+    background-color: #0076b5b7;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+  }
+
+  .link-buttons img {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .link-buttons:hover {
+    background-color: darkcyan;
+  }
+
+  .git-buttons {
+    background-color: #333333d8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    width: 220px;               
+    justify-content: center;     
+  }
+
+  .git-buttons img {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .git-buttons:hover {
+    background-color: #555;
+  }
+
+.we {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Arial', sans-serif;
+}
+
+.we h1 {
+  color: #2c3e50;
+  font-size: 32px;
+}
+
+.we p {
+  font-size: 18px;
+  color: #555;
+}
+
+.firewo-containers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.fire-spa {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: explode-pop 1.2s ease-out forwards;
+  box-shadow: 0 0 15px white;
+  opacity: 0.8;
+}
+
+@keyframes explode-pop {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) translate(30px, -30px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5) translate(-150px, 150px);
+    opacity: 0;
+  }
+}
+
+
+@keyframes fadeAnimation {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .fadings{
+      border-radius: 30px;   
+      color:red;
+      animation: fadeAnimation 2s infinite;
+      margin-top: 10px;
+      margin-bottom: 1px;
+      
+    }
+
+    @keyframes fadeAnimation {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .ff{
+      border-radius: 30px;   
+      color:fuchsia;
+      animation: fadeAnimation 2s infinite;
+      margin-top: 10px;
+      margin-bottom: 1px;
+      
+    }

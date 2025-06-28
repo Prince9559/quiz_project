@@ -18,6 +18,11 @@ function Home() {
         <Link to="/computer">
         <button className='home-button'><strong>Computer Quiz</strong></button>
         </Link>
+
+        <Link to="/physics">
+        <button className='home-button'><strong>Physics Quiz</strong></button>
+        </Link>
+        
       </div>
     </div>
   );
