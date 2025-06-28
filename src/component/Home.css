@@ -1,6 +1,7 @@
 .home {
   text-align: center;
   padding: 50px;
+  
 }
 
 .button-container {
@@ -12,15 +13,30 @@
 
 .home-button {
   background-color: #4CAF50;
-  color: white;
-  padding: 15px 30px;
-  border: none;
+  padding: 13px 25px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
   transition: background-color 0.3s;
+    border: 1px solid #4CAF50; 
+    gap: 16px;
+    color: #f9f9f9;      
+    transition: all 0.3s ease;
 }
 
 .home-button:hover {
-  background-color: #45a049;
+  transform: translateY(-3px);
 }
+
+@keyframes fadeAnimation {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .fading{
+      
+      color:darkred;
+      animation: fadeAnimation 4s infinite;
+      
+      
+    }

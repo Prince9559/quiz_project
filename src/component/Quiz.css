@@ -261,9 +261,19 @@ width: 450px;
   }
 }
 
+@keyframes fadeAnimation {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
 
-
-
+    .fading{
+      border-radius: 30px;   
+      color: blue;
+      animation: fadeAnimation 2s infinite;
+      margin-top: 10px;
+      margin-bottom: 1px;
+      
+    }
 
 
 

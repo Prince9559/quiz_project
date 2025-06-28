@@ -1,4 +1,4 @@
- import React, { useState } from "react";
+ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import './Math.css';
@@ -11,6 +11,11 @@ function Maths() {
   const [showFirework, setShowFirework] = useState(false);
 
   let correctanswer = "";
+
+  
+  useEffect(() => {
+   show();
+  }, []);
 
   /******************************** Show *******************************************************/
   const show = () => {
@@ -101,28 +106,24 @@ function Maths() {
         </div>
       )}
 
-      {questions.length === 0 && (
+      {/* Show Result with Restart only */}
+      {questions.length === 0 && showResult && (
         <div className="welcome">
-          <h1>👋 Welcome to Quiz!</h1>
-          {showResult ? (
-            <pre>
-              <p><strong>🎉 Your Final Score: {score} / 10</strong></p>
-              <p>Click <strong>Restart Quiz</strong> to play again.</p>
-            </pre>
-
-          ) : (
-
-          <p>Click <strong>Start Quiz</strong> to begin.</p>
-          )}
+          <h1>👋 Quiz Finished!</h1>
+          <pre>
+            <p><strong>🎉 Your Final Score: {score} / 10</strong></p>
+          </pre>
           <button className="quiz" onClick={show}>
-            <b>{showResult ? "Restart Quiz" : "Start Quiz"}</b>
+            <b>Restart Quiz</b>
           </button>
         </div>
       )}
 
-
       {questions.length > 0 && (
         <div>
+
+          <h1 className="fading">🥀 <i>Welcome to Math Quiz</i> 🌷</h1>
+
           <h2 className="ques"><b>Question No:</b> {questions[qno]["ques_no"]}</h2>
           <h2 className="number"><b>Question:</b> {questions[qno]["question"]}</h2>
           <h2>✅ Your Score: {score} / {questions.length}</h2>
@@ -155,8 +156,7 @@ function Maths() {
 
               <button className="text" onClick={() => { handleNext(); storeData(); }}>Next</button>
 
-              
-              
+              <input className="pics" type="image" src="pic/ma.jpg" alt="Math pic" />
             </div>
           </div>
 
