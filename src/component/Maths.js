@@ -1,9 +1,9 @@
  import React, { useState } from "react";
 import axios from "axios";
 
-import './Quiz.css';
+import './Math.css';
 
-function Quiz() {
+function Maths() {
   const [questions, setQuestions] = useState([]);
   const [qno, setQno] = useState(0);
   const [score, setScore] = useState(0);
@@ -14,7 +14,7 @@ function Quiz() {
 
   /******************************** Show *******************************************************/
   const show = () => {
-    const baseURL = 'https://prince9559.github.io/jsonproject/Question.json';
+    const baseURL = 'https://prince9559.github.io/jsonproject/math.json';
 
     axios.get(baseURL)
       .then((response) => {
@@ -155,7 +155,7 @@ function Quiz() {
 
               <button className="text" onClick={() => { handleNext(); storeData(); }}>Next</button>
 
-              <input className="pics" type="image" src={questions[qno]["src"]} alt={`Question ${qno + 1}`} />
+              
               
             </div>
           </div>
@@ -192,4 +192,4 @@ function Quiz() {
   );
 }
 
-export default Quiz;
+export default Maths;

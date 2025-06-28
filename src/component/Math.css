@@ -1,4 +1,4 @@
-  .radio-group-container {
+ .radio-group-container {
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -26,7 +26,7 @@ width: 450px;
   cursor: pointer;
   gap: 10px;
   margin-top: 10px;
-  margin-left: 15px;
+  margin-left: 190px;
   
 }
 
@@ -42,7 +42,7 @@ width: 450px;
     font-size: 20px;
     color: #f9f9f9;      
     margin-top: 220px;  
-    margin-left: 25px;
+    margin-left: 170px;
     box-shadow: 0 4px 15px #38bdf8aa;
     transition: all 0.3s ease;
 }
@@ -115,7 +115,7 @@ width: 450px;
       font-family: Arial, sans-serif;
       font-size: 16px;
       margin-bottom: 20px;
-      margin-top: 30px;
+      margin-top: 6px;
     }
     .whatsapp-button img {
       height: 20px;
@@ -261,18 +261,3 @@ width: 450px;
   }
 }
 
-
-
-
-
-
-
-const storeData = () => {
-  if (questions.length === 0) {
-    alert("No questions to store!");
-    return;
-  }
-
-  localStorage.setItem("questions", JSON.stringify(questions));
-  alert("Store Data Successfully!");
-};
