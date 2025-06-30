@@ -41,3 +41,15 @@
       
     }
 
+    .image{
+      width: 200px;
+      height: 200px;
+      margin-top: 70px;
+      border-radius: 10px;
+    }
+
+    .img{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }

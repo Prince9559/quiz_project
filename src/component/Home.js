@@ -57,11 +57,22 @@ function Home() {
         <Link to="/sparsh">
         <button className='home-button'><strong>C# Quiz</strong></button>
         </Link>
+   
+
+   
 
       </div>
+
+    <div className='img'>
+    <input className='image' type='image' src='pic/prince.jpg'></input>
+    </div>
+
+
     </div>
 
     </div>
+
+    
     
   );
 }
