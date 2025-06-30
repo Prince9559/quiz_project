@@ -12,8 +12,10 @@ import Java from "./component/Java";
 import Python from "./component/Python";
 import Html from "./component/Html";
 import Css from "./component/Css";
+import Flutter from "./component/Flutter";
 
 import "./App.css";
+import Sparsh from "./component/Sparsh";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/python"element={<Python/>}/>
         <Route path="/html"element={<Html/>}/>
         <Route path="/css"element={<Css/>}/>
+        <Route path="/flutter"element={<Flutter/>}/>
+        <Route path="/sparsh"element={<Sparsh/>}/>
       </Routes>
     </Router>
     </div>

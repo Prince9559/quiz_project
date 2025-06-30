@@ -285,7 +285,7 @@ width: 450px;
 }
 
 .result-table th, .result-table td {
-  border: 1px solid blue;
+  border: 2px solid black;
   padding: 8px;
   text-align: left;
 }
@@ -295,7 +295,7 @@ width: 450px;
 }
 
 .result-table td {
-  background-color: #fff;
+  background-color:rgba(169, 169, 169, 0.591);
 }
 
 

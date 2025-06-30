@@ -24,3 +24,21 @@
   transform: translateY(-2px);
   background-color: #45a049;
 }
+
+.image{
+  width: 60px;
+  height: 60px;
+  margin-top: 260px;
+
+}
+.img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.foot{
+  width: 60px;
+  height: 60px;
+  margin-top: 260px;
+}

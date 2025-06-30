@@ -158,7 +158,7 @@ function Quiz() {
               </td>
               <td>{selected}</td>
               <td style={{ color: isCorrect ? "green" : "red" }}>
-                {isCorrect ? "Correct" : "Incorrect"}
+                {isCorrect ? "✔ Correct" : "✘ Incorrect"}
               </td>
             </tr>
           );

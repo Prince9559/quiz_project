@@ -146,7 +146,7 @@ function Cpp() {
               </td>
               <td>{selected}</td>
               <td style={{ color: isCorrect ? "green" : "red" }}>
-                {isCorrect ? "Correct" : "Incorrect"}
+                {isCorrect ? "✔ Correct" : "✘ Incorrect"}
               </td>
             </tr>
           );
@@ -165,7 +165,7 @@ function Cpp() {
       {questions.length > 0 && (
         <div>
 
-          <h1 className="fff">🥀 <i>Welcome to Computer Quiz</i> 🌷</h1>
+          <h1 className="fff">🥀 <i>Welcome to C++ Quiz</i> 🌷</h1>
 
           <h2 className="quick"><b>Question No:</b> {questions[qno]["ques_no"]}</h2>
           <h2 className="new"><b>Question:</b> {questions[qno]["question"]}</h2>

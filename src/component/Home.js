@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="home">
     
-      <h1 className='fading'>🥀 Welcome to My Quiz App 🎯</h1>
+      <h1 className='fading'>👉🏼 Welcome to My Quiz App 🎯</h1>
 
       <div className="button-container">
         <Link to="/quiz">
@@ -47,8 +47,17 @@ function Home() {
         <button className='home-button'><strong>CSS Quiz</strong></button>
         </Link>
 
+        <Link to="/flutter">
+        <button className='home-button'><strong>Flutter Quiz</strong></button>
+        </Link>
+
+        <Link to="/sparsh">
+        <button className='home-button'><strong>C# Quiz</strong></button>
+        </Link>
+
       </div>
     </div>
+    
   );
 }
 
