@@ -55,6 +55,9 @@ function Computer() {
     let givenanswer = handleSum();
     correctanswer = questions[qno]["correct"];
 
+    questions[qno]["answer"]=givenanswer;
+    console.table(questions[qno]);
+
     if (givenanswer === correctanswer) {
       if (score < questions.length) {
         setScore(score + 1);
@@ -107,17 +110,58 @@ function Computer() {
       )}
 
       {/* Show Result with Restart only */}
-      {questions.length === 0 && showResult && (
-        <div className="welcomes">
-          <h1>👋 Quiz Finished!</h1>
-          <pre>
-            <p><strong>🎉 Your Final Score: {score} / 10</strong></p>
-          </pre>
-          <button className="quizs" onClick={show}>
-            <b>Restart Quiz</b>
-          </button>
-        </div>
-      )}
+      
+         {questions.length === 0 && showResult && (
+  <div className="welcomes">
+    <h1>👋 Test Results</h1>
+    <p><strong>Your score: {score}</strong></p>
+
+    <table className="result-table">
+      <thead>
+        <tr>
+          <th>Q. No.</th>
+          <th>Question</th>
+          <th>Options</th>
+          <th>Selected Answer</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {JSON.parse(localStorage.getItem("questions")).map((q, i) => {
+          const selected = q.answer ? q[q.answer] : "Not Answered";
+          const correct = q[q.correct];
+          const isCorrect = q.answer === q.correct;
+
+          return (
+            <tr key={i}>
+              <td>{q.ques_no}</td>
+              <td>{q.question}</td>
+              <td>
+                <div>
+                  A: {q.a}<br />
+                  B: {q.b}<br />
+                  C: {q.c}<br />
+                  D: {q.d}
+                </div>
+              </td>
+              <td>{selected}</td>
+              <td style={{ color: isCorrect ? "green" : "red" }}>
+                {isCorrect ? "Correct" : "Incorrect"}
+              </td>
+            </tr>
+          );
+        })}
+
+      </tbody>
+    </table>
+
+
+    <button className="quizs" onClick={show}>
+      <b>Restart Quiz</b>
+    </button>
+  </div>
+)}
 
       {questions.length > 0 && (
         <div>

@@ -38,6 +38,10 @@ function Quiz() {
       .catch(error => {
         console.log("Error", error);
       });
+
+
+
+
   };
 
   /**********************************  HandleNext **********************************************/
@@ -54,6 +58,12 @@ function Quiz() {
 
     let givenanswer = handleSum();
     correctanswer = questions[qno]["correct"];
+
+    // alert("check");
+
+
+    questions[qno]["answer"]=givenanswer;
+    console.table(questions[qno]);
 
     if (givenanswer === correctanswer) {
       if (score < questions.length) {
@@ -74,7 +84,9 @@ function Quiz() {
   };
 
   const storeData = () => {
-    localStorage.setItem("questions", JSON.stringify(questions));
+
+  localStorage.setItem("questions", JSON.stringify(questions));
+
   };
 
   /************************************* HandleSum ***************************************************/
@@ -106,19 +118,62 @@ function Quiz() {
         </div>
       )}
 
-      {/* Show Result with Restart only */}
-      {questions.length === 0 && showResult && (
-        <div className="welcome">
-          <h1>👋 Quiz Finished!</h1>
-          <pre>
-            <p><strong>🎉 Your Final Score: {score} / 10</strong></p>
-          </pre>
-          <button className="quiz" onClick={show}>
-            <b>Restart Quiz</b>
-          </button>
-        </div>
-      )}
+      
+     
+  {/********************************************** Table Show *********************************************/}
+  {questions.length === 0 && showResult && (
+  <div className="welcome">
+    <h1>👋 Test Results</h1>
+    <p><strong>Your score: {score}</strong></p>
 
+    <table className="result-table">
+      <thead>
+        <tr>
+          <th>Q. No.</th>
+          <th>Question</th>
+          <th>Options</th>
+          <th>Selected Answer</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {JSON.parse(localStorage.getItem("questions")).map((q, i) => {
+          const selected = q.answer ? q[q.answer] : "Not Answered";
+          const correct = q[q.correct];
+          const isCorrect = q.answer === q.correct;
+
+          return (
+            <tr key={i}>
+              <td>{q.ques_no}</td>
+              <td>{q.question}</td>
+              <td>
+                <div>
+                  A: {q.a}<br />
+                  B: {q.b}<br />
+                  C: {q.c}<br />
+                  D: {q.d}
+                </div>
+              </td>
+              <td>{selected}</td>
+              <td style={{ color: isCorrect ? "green" : "red" }}>
+                {isCorrect ? "Correct" : "Incorrect"}
+              </td>
+            </tr>
+          );
+        })}
+
+      </tbody>
+    </table>
+
+
+    <button className="quiz" onClick={show}>
+      <b>Restart Quiz</b>
+    </button>
+  </div>
+)}
+
+{/******************************************** Questions ***********************************************/}
       {questions.length > 0 && (
         <div>
           <h1 className="fading">👋 <i>Welcome to Image Quiz</i> 😎</h1>
@@ -155,6 +210,8 @@ function Quiz() {
 
               <button className="text" onClick={() => { handleNext(); storeData(); }}>Next</button>
 
+              {/* <input value="Click" type="button" onClick="f('c')"/> */}
+
             <input className="pics" type="image" src={questions[qno]["src"]} alt={`Question ${qno + 1}`} />
         
             </div>
@@ -162,12 +219,15 @@ function Quiz() {
 
           <br />
 
+{/******************************************* Whatsapp ***********************************************/}
+
           <a className="whatsapp-button" href="https://wa.me/919559618602" target="_blank" rel="noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
             Contact Me on WhatsApp
           </a>
 
           <br />
+{/**************************************** Linkedin ***************************************************/}
 
           <a className="linkedin-button" href="https://www.linkedin.com/in/prince-kumar-724160333/" target="_blank" rel="noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" />
@@ -175,14 +235,14 @@ function Quiz() {
           </a>
 
           <br />
-
+{/***************************************************** Github ********************************************/}
           <a className="github-button" href="https://github.com/prince9559" target="_blank" rel="noreferrer">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
             Connect Me on GitHub
           </a>
 
           <br />
-
+{/******************************************************* Footer **************************************/}
           <footer className="design">
             &copy; 2025 Prince Kumar | Designed with ❤️
           </footer>

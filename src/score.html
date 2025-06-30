@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+// const js=`{
+//         "ques_no": "10",
+//         "question":"Which keyword is used to define a class in c++?",
+//         "a":"object",
+//         "b":"structure",
+//         "c":"class",
+//         "d":"define",
+//         "answer":"e",
+//         "correct":"c",
+//         "image":"https://kishan80090.github.io/jsondata/pictures/redc++.jpg"
+//     }`;
+
+ const js=`{
+"ques_no": "2",
+"question": "What is C++ ?",
+"a": "Object Oriented Programming",
+"b": "Movie",
+"c": "Numbering",
+"d": "Meta",
+"correct": "a",
+"answer":"e",
+"src": "pic/c++.jpg"
+}`;
+
+function f(givenanswer)
+{
+  let  obj=JSON.parse(js);
+  console.table(obj);
+  obj["answer"]=givenanswer;
+  console.table(obj);
+}
+    </script>
+</head>
+<body>
+    <input value="Click" type="button" onclick="f('c')"/>
+</body>
+</html>
