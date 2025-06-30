@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
+
+    <div className='back'>
+
     <div className="home">
     
       <h1 className='fading'>👉🏼 Welcome to My Quiz App 🎯</h1>
@@ -56,6 +59,8 @@ function Home() {
         </Link>
 
       </div>
+    </div>
+
     </div>
     
   );
