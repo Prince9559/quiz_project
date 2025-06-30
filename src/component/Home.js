@@ -23,6 +23,30 @@ function Home() {
         <button className='home-button'><strong>Physics Quiz</strong></button>
         </Link>
         
+        <Link to="/chemistry">
+        <button className='home-button'><strong>Chemistry Quiz</strong></button>
+        </Link>
+
+        <Link to="/cpp">
+        <button className='home-button'><strong>C++ Quiz</strong></button>
+        </Link>
+
+        <Link to="/java">
+        <button className='home-button'><strong>Java Quiz</strong></button>
+        </Link>
+
+        <Link to="/python">
+        <button className='home-button'><strong>Python Quiz</strong></button>
+        </Link>
+
+        <Link to="/html">
+        <button className='home-button'><strong>HTML Quiz</strong></button>
+        </Link>
+
+        <Link to="/css">
+        <button className='home-button'><strong>CSS Quiz</strong></button>
+        </Link>
+
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
  import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import './Quiz.css';
+import './Chemistry.css';
 
-function Quiz() {
+function Java() {
   const [questions, setQuestions] = useState([]);
   const [qno, setQno] = useState(0);
   const [score, setScore] = useState(0);
@@ -19,7 +19,7 @@ function Quiz() {
 
   /******************************** Show *******************************************************/
   const show = () => {
-    const baseURL = 'https://prince9559.github.io/jsonproject/Question.json';
+    const baseURL = ' https://prince9559.github.io/jsonproject/java.json';
 
     axios.get(baseURL)
       .then((response) => {
@@ -38,10 +38,6 @@ function Quiz() {
       .catch(error => {
         console.log("Error", error);
       });
-
-
-
-
   };
 
   /**********************************  HandleNext **********************************************/
@@ -58,9 +54,6 @@ function Quiz() {
 
     let givenanswer = handleSum();
     correctanswer = questions[qno]["correct"];
-
-    // alert("check");
-
 
     questions[qno]["answer"]=givenanswer;
     console.table(questions[qno]);
@@ -84,9 +77,7 @@ function Quiz() {
   };
 
   const storeData = () => {
-
-  localStorage.setItem("questions", JSON.stringify(questions));
-
+    localStorage.setItem("questions", JSON.stringify(questions));
   };
 
   /************************************* HandleSum ***************************************************/
@@ -102,11 +93,11 @@ function Quiz() {
   return (
     <div>
       {showFirework && (
-        <div className="firework-container">
+        <div className="firewok-containers">
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="fire-spark"
+              className="fire-sp"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -119,11 +110,8 @@ function Quiz() {
       )}
 
       
-     
-  {/********************************************** Table Show *********************************************/}
-  {questions.length === 0 && showResult && (
-  <div className="welcome">
-
+         {questions.length === 0 && showResult && (
+  <div className="well">
     <h1>👋 Test Results</h1>
     <p><strong>Your score: {score}</strong></p>
 
@@ -168,23 +156,23 @@ function Quiz() {
     </table>
 
 
-    <button className="quiz" onClick={show}>
+    <button className="questions" onClick={show}>
       <b>Restart Quiz</b>
     </button>
   </div>
 )}
 
-{/******************************************** Questions ***********************************************/}
       {questions.length > 0 && (
         <div>
-          <h1 className="fading">👋 <i>Welcome to Image Quiz</i> 😎</h1>
 
-          <h2 className="ques"><b>Question No:</b> {questions[qno]["ques_no"]}</h2>
-          <h2 className="number"><b>Question:</b> {questions[qno]["question"]}</h2>
+          <h1 className="fff">🥀 <i>Welcome to Computer Quiz</i> 🌷</h1>
+
+          <h2 className="quick"><b>Question No:</b> {questions[qno]["ques_no"]}</h2>
+          <h2 className="new"><b>Question:</b> {questions[qno]["question"]}</h2>
           <h2>✅ Your Score: {score} / {questions.length}</h2>
 
-          <div className="radio-group-container">
-            <div className="radio-group">
+          <div className="radio-containeer">
+            <div className="radio-buttoms">
               <label>
                 <input type="radio" name="choose" value="a" id="a" />
                 {questions[qno]["a"]}
@@ -209,42 +197,36 @@ function Quiz() {
                 <input style={{ display: "none" }} type="radio" name="choose" value="e" id="e" />
               </label>
 
-              <button className="text" onClick={() => { handleNext(); storeData(); }}>Next</button>
+              <button className="title" onClick={() => { handleNext(); storeData(); }}>Next</button>
 
-              {/* <input value="Click" type="button" onClick="f('c')"/> */}
-
-            <input className="pics" type="image" src={questions[qno]["src"]} alt={`Question ${qno + 1}`} />
-        
+              
             </div>
           </div>
 
           <br />
 
-{/******************************************* Whatsapp ***********************************************/}
-
-          <a className="whatsapp-button" href="https://wa.me/919559618602" target="_blank" rel="noreferrer">
+          <a className="whatsap-buttons" href="https://wa.me/919559618602" target="_blank" rel="noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
             Contact Me on WhatsApp
           </a>
 
           <br />
-{/**************************************** Linkedin ***************************************************/}
 
-          <a className="linkedin-button" href="https://www.linkedin.com/in/prince-kumar-724160333/" target="_blank" rel="noreferrer">
+          <a className="linked-buttons" href="https://www.linkedin.com/in/prince-kumar-724160333/" target="_blank" rel="noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" />
             Connect Me on LinkedIn
           </a>
 
           <br />
-{/***************************************************** Github ********************************************/}
-          <a className="github-button" href="https://github.com/prince9559" target="_blank" rel="noreferrer">
+
+          <a className="gitt-buttons" href="https://github.com/prince9559" target="_blank" rel="noreferrer">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
             Connect Me on GitHub
           </a>
 
           <br />
-{/******************************************************* Footer **************************************/}
-          <footer className="design">
+
+          <footer className="div">
             &copy; 2025 Prince Kumar | Designed with ❤️
           </footer>
         </div>
@@ -253,4 +235,4 @@ function Quiz() {
   );
 }
 
-export default Quiz;
+export default Java;

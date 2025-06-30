@@ -1,10 +1,10 @@
- .radio-group-container {
+ .radio-containeer {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 
-.radio-group {
+.radio-buttoms{
 height: 290px;
 width: 450px;
   
@@ -19,18 +19,18 @@ width: 450px;
 
 }
 
-.radio-group label {
+.radio-buttoms label {
   display: flex; 
   align-items: center;
   font-size: 21px;
   cursor: pointer;
   gap: 10px;
   margin-top: 10px;
-  margin-left: 15px;
+  margin-left: 160px;
   
 }
 
- .text {
+ .title {
     position: absolute;
     height: 50px;
     width: 120px;
@@ -42,19 +42,17 @@ width: 450px;
     font-size: 20px;
     color: #f9f9f9;      
     margin-top: 220px;  
-    margin-left: 25px;
+    margin-left: 150px;
     box-shadow: 0 4px 15px #38bdf8aa;
     transition: all 0.3s ease;
 }
 
-.text:hover {
+.title:hover {
       transform: translateY(-3px);
     } 
+ 
 
-
-    
-
-.quiz {
+.questions {
 
     background-color: #4caf50;
     height: 50px;
@@ -74,7 +72,7 @@ width: 450px;
     
 }
       
-.quiz:hover {
+.questions:hover {
     transform: translate(2px, 2px); 
     box-shadow: none; 
   }
@@ -84,26 +82,17 @@ width: 450px;
       50% { opacity: 1; }
     }
 
-.pics {
-    width: 180px;
-    height: 165px;
-    margin-top: -168px;
-    margin-bottom: 50px;
-    margin-left: 255px;
-    border-radius: 10px;    
-    }
-
-.number{
+.new{
 
     color: #4caf50;
     
 }
 
-.ques{
+.quick{
     color: darkcyan;
 }
 
-.whatsapp-button {
+.whatsap-buttons {
       background-color: #25D366;
       color: white;
       padding: 12px 24px;
@@ -118,12 +107,12 @@ width: 450px;
       margin-bottom: 20px;
       margin-top: 6px;
     }
-    .whatsapp-button img {
+    .whatsap-buttons img {
       height: 20px;
       margin-right: 10px;
     }
 
-    .whatsapp-button:hover {
+    .whatsap-buttons:hover {
       background-color: darkcyan;
     }
 
@@ -133,7 +122,7 @@ width: 450px;
       50% { opacity: 1; }
     }
 
-    .design{
+    .div{
       margin-bottom: 25px;
       color: blue;
       animation: fadeAnimation 4s infinite;
@@ -142,7 +131,7 @@ width: 450px;
       
     }
 
-  .linkedin-button {
+  .linked-buttons {
     background-color: #0076b5b7;
     color: white;
     padding: 12px 24px;
@@ -158,16 +147,16 @@ width: 450px;
     margin-top: 3px;
   }
 
-  .linkedin-button img {
+  .linked-buttons img {
     height: 20px;
     margin-right: 10px;
   }
 
-  .linkedin-button:hover {
+  .linked-buttons:hover {
     background-color: darkcyan;
   }
 
-  .github-button {
+  .gitt-buttons {
     background-color: #333333d8;
     color: white;
     padding: 12px 24px;
@@ -185,48 +174,32 @@ width: 450px;
     justify-content: center;     
   }
 
-  .github-button img {
+  .gitt-buttons img {
     height: 20px;
     margin-right: 10px;
   }
 
-  .github-button:hover {
+  .gitt-buttons:hover {
     background-color: #555;
   }
 
-.progress-container {
-  width: 100%;
-  background-color: #e0e0e0;
-  border-radius: 25px;
-  margin: 10px 0;
-}
-
-.progress-bar {
-  height: 25px;
-  background-color: #0076b5;
-  color: white;
-  text-align: center;
-  line-height: 25px;
-  border-radius: 25px;
-  transition: width 0.4s ease-in-out;
-}
-.welcome {
+.we {
   text-align: center;
   margin-top: 40px;
   font-family: 'Arial', sans-serif;
 }
 
-.welcome h1 {
+.well h1 {
   color: #2c3e50;
   font-size: 32px;
 }
 
-.welcome p {
+.well p {
   font-size: 18px;
   color: #555;
 }
 
-.firework-container {
+.firewok-containers {
   position: fixed;
   top: 0;
   left: 0;
@@ -237,7 +210,7 @@ width: 450px;
   overflow: hidden;
 }
 
-.fire-spark {
+.fire-sp {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -262,41 +235,31 @@ width: 450px;
   }
 }
 
+
 @keyframes fadeAnimation {
       0%, 100% { opacity: 0; }
       50% { opacity: 1; }
     }
 
-    .fading{
+    .fadinggs{
       border-radius: 30px;   
-      color: blue;
+      color:red;
       animation: fadeAnimation 2s infinite;
       margin-top: 10px;
       margin-bottom: 1px;
       
     }
 
-     
-.result-table {
-  width: 90%;
-  max-width: 1000px;
-  margin: 20px auto;
-  border-collapse: collapse;
-}
+    @keyframes fadeAnimation {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
 
-.result-table th, .result-table td {
-  border: 1px solid blue;
-  padding: 8px;
-  text-align: left;
-}
-
-.result-table th {
-  background-color: yellowgreen;
-}
-
-.result-table td {
-  background-color: #fff;
-}
-
-
-
+    .fff{
+      border-radius: 30px;   
+      color:fuchsia;
+      animation: fadeAnimation 2s infinite;
+      margin-top: 10px;
+      margin-bottom: 1px;
+      
+    }
