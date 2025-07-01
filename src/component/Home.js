@@ -8,7 +8,7 @@ function Home() {
 
     <div className="home">
     
-      <h1 className='pri'>👉🏼 Welcome to My Quiz App</h1>
+      <h1 className='pri'>👋 Welcome to My Quiz App</h1>
 
       <div className="button-container">
         <Link to="/quiz">

@@ -1,23 +1,110 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Flower Rain Animation - Very Nice Effect</title>
   <style>
-    .responsive-box {
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at center, #000000 0%, #111111 100%);
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background: #ff69b4;
+      color: white;
+      border-radius: 10px;
+      width: 80%;
+      margin: 20px auto;
+      box-shadow: 0 0 20px #ff69b4;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 50px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .content button {
+      background-color: #4CAF50;
+      padding: 12px 20px;
+      margin: 8px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .content button:hover {
+      background-color: #45a049;
+    }
+
+    /* Flower animation */
+    .flower {
+      position: fixed;
+      top: -50px;
       width: 50px;
       height: 50px;
-      background-color: #27ae60;
-      transition: transform 0.5s ease-in-out;
+      background-image: url('https://i.ibb.co/7KqVPZb/pink-flower.png');
+      background-size: cover;
+      opacity: 0.85;
+      animation: fall linear forwards;
+      pointer-events: none;
+      z-index: 0;
     }
-    @media (max-width: 600px) {
-      .responsive-box:hover {
-        transform: scale(1.5);
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
       }
     }
   </style>
 </head>
 <body>
-  <div class="responsive-box"></div>
+
+  <h1>🌸 Welcome to My Quiz App 🌸</h1>
+
+  <div class="content">
+    <button>Image Quiz</button>
+    <button>Math Quiz</button>
+    <button>Computer Quiz</button>
+    <button>Physics Quiz</button>
+    <button>Chemistry Quiz</button>
+    <button>C++ Quiz</button>
+    <button>Java Quiz</button>
+    <button>Python Quiz</button>
+    <button>HTML Quiz</button>
+    <button>CSS Quiz</button>
+    <button>Flutter Quiz</button>
+    <button>C# Quiz</button>
+  </div>
+
+  <script>
+    // Create falling flowers
+    setInterval(() => {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * window.innerWidth + 'px';
+      flower.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(flower);
+
+      // Remove after animation
+      setTimeout(() => {
+        flower.remove();
+      }, 12000);
+    }, 250);
+  </script>
 </body>
 </html>
