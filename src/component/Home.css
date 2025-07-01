@@ -64,7 +64,7 @@
       justify-content: center;
     }
 
-    .whatsapp-button {
+    .whatsappp-button {
       background-color: blue;
       color: white;
       padding: 12px 24px;
@@ -79,11 +79,11 @@
       margin-bottom: 20px;
       margin-top: 30px;
     }
-    .whatsapp-button img {
+    .whatsappp-button img {
       height: 20px;
       margin-right: 10px;
     }
 
-    .whatsapp-button:hover {
+    .whatsappp-button:hover {
       background-color: darkcyan;
     }
