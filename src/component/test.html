@@ -1,85 +1,23 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Full Page Fireworks</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      overflow: hidden;
-      height: 100%;
-      width: 100%;
+    .responsive-box {
+      width: 50px;
+      height: 50px;
+      background-color: #27ae60;
+      transition: transform 0.5s ease-in-out;
     }
-
-    .particle {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      opacity: 0;
-      animation: explode 1s ease-out forwards;
-    }
-
-    @keyframes explode {
-      0% {
-        transform: translate(0, 0);
-        opacity: 1;
-      }
-      100% {
-        transform: translate(var(--dx), var(--dy));
-        opacity: 0;
+    @media (max-width: 600px) {
+      .responsive-box:hover {
+        transform: scale(1.5);
       }
     }
   </style>
 </head>
 <body>
-  <script>
-    // Define colors for particles
-    const colors = ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet', 'white'];
-
-    function createFirework(x, y) {
-      for (let i = 0; i < 20; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-
-        // Random color
-        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-
-        // Set start position
-        particle.style.left = `${x}px`;
-        particle.style.top = `${y}px`;
-
-        // Random angle and distance
-        const angle = Math.random() * 2 * Math.PI;
-        const distance = 100 + Math.random() * 100;
-        const dx = Math.cos(angle) * distance;
-        const dy = Math.sin(angle) * distance;
-
-        particle.style.setProperty('--dx', `${dx}px`);
-        particle.style.setProperty('--dy', `${dy}px`);
-
-        document.body.appendChild(particle);
-
-        // Remove after animation
-        setTimeout(() => {
-          particle.remove();
-        }, 1000);
-      }
-    }
-
-    function launchRandomFirework() {
-      const x = Math.random() * window.innerWidth;
-      const y = Math.random() * window.innerHeight / 2 + window.innerHeight / 4;
-      createFirework(x, y);
-    }
-
-    // Launch fireworks repeatedly
-    setInterval(launchRandomFirework, 800);
-
-    // Optionally, launch one at start
-    launchRandomFirework();
-  </script>
+  <div class="responsive-box"></div>
 </body>
 </html>

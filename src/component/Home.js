@@ -67,6 +67,15 @@ function Home() {
     <input className='image' type='image' src='pic/prince.jpg'></input>
     </div>
 
+<p>Prince Kumar 💞</p>
+
+
+<div>
+            <a className="whatsapp-button" href="https://wa.me/919559618602" target="_blank" rel="noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
+            Contact Me on WhatsApp
+          </a>
+</div>
 
     </div>
 
